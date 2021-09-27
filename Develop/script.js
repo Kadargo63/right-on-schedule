@@ -29,10 +29,10 @@ function renderSchedule(){
     var itemToAdd = (($(this).parent()).children("textarea")).val();
   
     //see which item we need to update based on the hour of the button clicked matching
-    for (var j = 0; j < toDoItems.length; j++){
-        if (toDoItems[j].hour == hourToUpdate){
+    for (var i = 0; i < toDoItems.length; i++){
+        if (toDoItems[i].hour == hourToUpdate){
             //set its text to what was added to textarea
-            toDoItems[j].text = itemToAdd;
+            toDoItems[i].text = itemToAdd;
           }
         }
     localStorage.setItem("todos", JSON.stringify(toDoItems));
